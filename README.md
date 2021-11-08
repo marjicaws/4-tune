@@ -22,6 +22,20 @@ Before you start any actual coding, you must meet with your Squad Leader for ~10
 I'll be using API from last.fm. I'll be pulling artist image, name, and profile link. It will be organized by genre so I'll be pulling that info as well.
 - **API Snippet**: A sample snippet of JSON from a successful GET request you have made to your API using Postman.
 
+var request = require('request');
+var options = {
+  'method': 'GET',
+  'url': 'https://www.last.fm/api',
+  'headers': {
+    'Cookie': 'sessionid=eyJfYXV0aF91c2VyX2hhc2giOiJkZWZhdWx0Iiwic2Vzc2lvbl9pZCI6Ijc4MmZiZDdlLTJmOTMtNDIxOS1iNDAzLTg1ZDk1OTg0Y2E4YSJ9:1mk9Ip:yhYqnrEdxVQWzoCrX7RTFzUDlGc; lfmanon=1; not_first_visit=1'
+  }
+};
+request(options, function (error, response) {
+  if (error) throw new Error(error);
+  console.log(response.body);
+});
+
+
 - **Wireframes**:  The proposed layout and design of your app. Create mockups for your views. If your are creating multiple views including both desktop and mobile formats, and consider whether or not you need to account for landscape and portrait orientations. Please use a digital tool to complete your wireframe.
 
 *****https://wireframe.cc/HCKNtw
@@ -32,7 +46,7 @@ I'll be using API from last.fm. I'll be pulling artist image, name, and profile 
  
 - **Post-MVP**: A list of additional/advanced features you would like to include in your app after you have met MVP.
 
-I'm not sure at the moment. Maybe a feature that will let you play their top track on the page so you can hear some of their music right there and then.
+*** Maybe a feature that will let you play their top track on the page so you can hear some of their music right there and then.
 
 - **Goals**: What you plan to accomplish for each day of the project week.
 
