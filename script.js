@@ -1,5 +1,9 @@
 let genreSearch = document.querySelector(".genrelist");
 
+console.log(axios.get("https://ws.audioscrobbler.com/2.0/?method=chart.gettopartists&artist=&api_key=aed2c1389af55ee448291a0b7eeaddfa&format=json"));
+   // .then((res) => {
+  //      console.log(res);
+  //  });
 ///User selects genre from drop down 
 
 
