@@ -1,176 +1,124 @@
-# 4-tune
+# Project Overview
 
-# Project #1: Your First Application
+## Project Name
 
-### STEP 1: Read the Directions
-1) Read **ALL** of the directions before you start. We will know...
+"4-Tune"
 
-### STEP 2: Pitch Your Project
-Before you start any actual coding, you must meet with your Squad Leader for ~10 minutes to get your app idea approved. Prepare the following materials _before_ your meeting and put them in your README.md:
-- **App Title**: The name of your app.
+## Project Description
 
-**App Title : "4-Tune"
+It will bring up 3 random artists with smaller followings as a random music recommendation for new music to listen to for the respective genre.  It's something for music lovers who are looking for new music to listen to.
 
-- **App Description**: What your app will do.
+## API and Data Sample
 
-***It will bring up 3 random artists with smaller followings as a random music recommendation for new music to listen to for the respective genre.  It's something for music lovers looking for new music to listen to.
+[API LINK Last Radio FM](https://www.last.fm/api)
+```
+{
+    "topalbums": {
+        "album": [
+            {
+                "name": "Believe",
+                "playcount": 3637592,
+                "mbid": "63b3a8ca-26f2-4e2b-b867-647a6ec2bebd",
+                "url": "https://www.last.fm/music/Cher/Believe",
+                "artist": {
+                    "name": "Cher",
+                    "mbid": "bfcc6d75-a6a5-4bc6-8282-47aec8531818",
+                    "url": "https://www.last.fm/music/Cher"
+                },
+                "image": 
+                    {
+                        "#text": "https://lastfm.freetls.fastly.net/i/u/300x300/3b54885952161aaea4ce2965b2db1638.png",
+                        "size": "extralarge"
+                    }
+                
+            },
+            {
+                "name": "The Very Best of Cher",
+                "playcount": 1720144,
+                "mbid": "a7e2dad7-e733-4bee-9db1-b31e3183eaf5",
+                "url": "https://www.last.fm/music/Cher/The+Very+Best+of+Cher",
+                "artist": {
+                    "name": "Cher",
+                    "mbid": "bfcc6d75-a6a5-4bc6-8282-47aec8531818",
+                    "url": "https://www.last.fm/music/Cher"
+                },
+                "image": 
+                    {
+                        "#text": "https://lastfm.freetls.fastly.net/i/u/34s/0fd942f7e629a01ec2d067e41464ff5d.png",
+                        "size": "small"
+                    },
+           
+            },
+```
 
-***This app will be a database of artists that aren't majorly popular that users can use as a source to discover music they haven't heard before. 
+## Wireframes
 
-- **API**: The API you are using and the information you plan to get from it.
+![alt text](https://res.cloudinary.com/marssantos/image/upload/v1636409831/Screen_Shot_2021-11-08_at_3.44.19_PM_bx2nv6.png)
+![alt text](https://res.cloudinary.com/marssantos/image/upload/v1636415984/Screen_Shot_2021-11-08_at_6.59.11_PM_laibvs.png)
 
-I'll be using API from last.fm. I'll be pulling artist image, name, and profile link. It will be organized by genre so I'll be pulling that info as well.
-- **API Snippet**: A sample snippet of JSON from a successful GET request you have made to your API using Postman.
+### MVP/PostMVP
 
-var request = require('request');
-var options = {
-  'method': 'GET',
-  'url': 'https://www.last.fm/api',
-  'headers': {
-    'Cookie': 'sessionid=eyJfYXV0aF91c2VyX2hhc2giOiJkZWZhdWx0Iiwic2Vzc2lvbl9pZCI6Ijc4MmZiZDdlLTJmOTMtNDIxOS1iNDAzLTg1ZDk1OTg0Y2E4YSJ9:1mk9Ip:yhYqnrEdxVQWzoCrX7RTFzUDlGc; lfmanon=1; not_first_visit=1'
-  }
-};
-request(options, function (error, response) {
-  if (error) throw new Error(error);
-  console.log(response.body);
-});
+The functionality will then be divided into two separate lists: MPV and PostMVP.  Carefully decided what is placed into your MVP as the client will expect this functionality to be implemented upon project completion.  
 
+#### MVP
 
-- **Wireframes**:  The proposed layout and design of your app. Create mockups for your views. If your are creating multiple views including both desktop and mobile formats, and consider whether or not you need to account for landscape and portrait orientations. Please use a digital tool to complete your wireframe.
+- Find and use External Data
+- Show Images on Page
+- Show link and Name on  Page
+- Be organized by Genre
+- Reefresh with new artist with click on Go button.
 
-*****https://wireframe.cc/HCKNtw
+#### PostMVP  
 
-- **MVP**: A list of features you will need to build in order to meet the Minimum Viable Product. This will be the rubric your project will be graded against.
+- Play top track through the page.
 
-****I need to bring an image from the website for each artist brought up, names, and a url for more info on the artist. The genre will be chosen from a drop list so I'll need to hook that to a function that will access library.getArtists to pull artists related to that genre. My biggest challenege will be accessing and pulling the array of artist by populatiry and then adding a cap to that popularity since the whole of point of the app is to expose people to artist the have less of a hance of hearing in popular media outlets. I will also need to style and format the page with html and css to look like the wireframing
- 
-- **Post-MVP**: A list of additional/advanced features you would like to include in your app after you have met MVP.
+## Project Schedule
 
-*** Maybe a feature that will let you play their top track on the page so you can hear some of their music right there and then.
+|  Day | Deliverable | Status
+|---|---| ---|
+|Nov 5-8| Prompt / Wireframes / Priority Matrix / Timeframes | Incomplete
+|Nov 8| Project Approval | Incomplete
+|Nov 9| Core Application Structure (HTML, CSS, etc.) | Incomplete
+|Nov 10| Pseudocode / actual code | Incomplete
+|Nov 11| Initial Clickable Model  | Incomplete
+|Nov 11| MVP | Incomplete
+|Nov 12| Presentations | Incomplete
 
-- **Goals**: What you plan to accomplish for each day of the project week.
+## Priority Matrix
 
-Day 1- I want to set up the basic html boiler plate and start writing the functions for accessing the the website for the info to pull. I want to start laying the framework for what functions I need to write to be able to reflect the results back to my website. 
-I need functions first to grab artist name, artist image, artist genre, and something that will only show artists that don't have a certain rank. (4 hours)
+![alt text](https://res.cloudinary.com/marssantos/image/upload/v1636409832/Screen_Shot_2021-11-08_at_4.55.42_PM_ihfir1.png)
 
-Day 2 - Being that I struggled with functions in the unit, I will still be creating functions on day 2 but I hope to be finished by the end of the day. (4 hours)
+## Timeframes
 
-I will need to create a function that will show the retrieved info at random on the page and show a different one each time the button go is pressed. I will also need to make sure that there is a function that pulls info for each genre. 
+Tell us how long you anticipate spending on each area of development. Be sure to consider how many hours a day you plan to be coding and how many days you have available until presentation day.
 
-Day 3 - Will be about making sure everything works and runs correctly. Adding the css styling and making the page looks nice and is easy to use. Also finishing any extra code needed to make the page function correctly. (4 hours)
+Time frames are also key in the development cycle.  You have limited time to code all phases of the game.  Your estimates can then be used to evalute game possibilities based on time needed and the actual time you have before game must be submitted. It's always best to pad the time by a few hours so that you account for the unknown so add and additional hour or two to each component to play it safe. Throughout your project, keep track of your Time Invested and Actual Time and update your README regularly.
 
-Day 4 - Continuing with beautifying the page and preparing to present for class.
+| Component      | Priority | Estimated Time | Time Invested | Actual Time |
+| ---            |  :---:   |     :---:      |    :---:      |    :---:    |
+| Git Request    |    H     |      3hrs      |     XXXX      |     XXXX    |
+| JS for Operaion|    H     |      4hrs      |     XXXX      |     XXXX    |
+| Retrieving Data|    H     |      3hrs      |     XXXX      |     XXXX    |
+| Rendering Data |    H     |      3hrs      |     XXXX      |     XXXX    |
+| CSS Resp. Dsgn |    H     |      4hrs      |     XXXX      |     XXXX    |
+| CSS Flex Box   |    H     |      4hrs      |     XXXX      |     XXXX    |
+| CSS Styling    |    L     |      3hrs      |     XXXX      |     XXXX    | 
+| Post MVP       |    L     |      1 hr      |     XXXX      |     XXXX    |
+| HTML           |    H     |      1 hr      |     XXXX      |     XXXX    | 
+| Deployment.    |    H     |      1 hr      |     XXXX      |     XXXX    | 
+| Adding Form    |    H     |      3hrs      |     XXXX      |     XXXX    |
+| Working w/ API |    H     |      3hrs      |     XXXX      |     XXXX    |
+| Total          |    H     |      6hrs      |     XXXX      |     XXXX    |
 
-Day 5 - Preparing my class presentation. Making sure everything works. Fine tuning anything that needs to be done to the app.
+## Code Snippet
 
-- **Priority Matrix**: A graph of your intended areas of development (Pseudocoding, Design, HTML, CSS, JavaScript, Testing, etc) plotted on an X/Y axis where X represents time to completion and Y represents priority. Use a professional tool or upload a well drawn image using an image hosting site such as [Cloudinary](https://cloudinary.com/) or a similar hosting service.
+Use this section to include a brief code snippet of functionality that you are proud of and a brief description.  
 
-https://mermaid.cloudinary.us/#/view/eyJjb2RlIjoiZ3JhcGggVERcbkFbSWRlbnRpZnkgdGhlIG5hbWUgb2YgdGhlIGFycmF5cyB0byBwdWxsIGZyb21dIC0tPnxTdGFydCBodG1sIEJvaWxlciBwbGF0ZXwgQihTdGFydCBjcmVhdGluZyBqYXZhc2NyaXB0IGZ1bmN0aW9ucyB0byBob29rIHRvIGJ1dHRvbnMsIGluZm8sIGdlbnJlIGRyb3AtbGlzdCwgc2V0LXVwIHJhbmRvbWl6ZXIgZXRjLilcbkIgLS0-IEN7RmluaXNoLCBmaXggLGFuZCBwZXJmZWN0IGFueSBicm9rZW4gamF2YXNjcmlwdCBjb2RlLn1cbkMgLS0-fE9uZXwgRFtGaW5pc2ggSFRNTCBsYXlvdXRdXG5DIC0tPnxUd298IEVbRmluaXNoIENTU11cbkQtLT58VGhyZWV8IEZbQmVhdXRpZnkgUGFnZSB3aXRoIEltYWdlcyFdXG4iLCJtZXJtYWlkIjp7InRoZW1lIjoiZGVmYXVsdCJ9fQ
+```
+function reverse(string) {
+	// here is the code to reverse a string of text
+}
+```
 
-- **Timeframes**: How long you anticipate spending on each area of development. Be sure to consider how many hours a day you plan to be coding and how many days you have available until presentation day. Components should be broken down into a maximum of 3 hours time blocks. 
-
-3 hours Mon, Tues, and Wed days. 2 on Thursday and Friday . I need as much time as I can on those functions so I'm spending most of my time there.
-
-Are you interested in styling your README.md to make it look nice? Don't know how to include photos or create links? Check out this [Markdown Cheetsheet](https://github.com/adam-p/markdown-here/wiki/Markdown-Cheatsheet)!
-
-### STEP 3: Make a New Repo
-1. [Make a new personal GitHub repo for your project](https://help.github.com/articles/create-a-repo/). **DO NOT FORK THIS REPO.** 
-2. This new repo should be under your personal Github account, not you GA Eneterprize account.
-2. Make sure your new repo is set to "Public" and initialize it with a README.md file. **This will be your project worksheet.**
-3. Send a link for your repository to your Squad Leader.
-4. After your have been approved, clone this new repository down to your machine.
-5. CD into the project directory and touch ```index.html```, ```style.css``` and ```script.js``` files.
-6. Test a commit and push it to make sure everything is connected with ```git commit -m "Go Bees!"```.
-
-Note: Your repository should **not** be called `project-1`! Think of a name for your application, and then name your repository after your application. 
-
-### STEP 4: &#x1F534; Build Your Project MVP — Mandatory To Pass
-
-#### Your application must meet these requirements:
-
-  1. Built with HTML, CSS, and JavaScript.
-  1. Styled using `Flexbox` or `Grid`.
-  1. Use Axios to make a request to an external data source and insert some of the retrieved data on to the DOM.
-  1. Implement responsive design using at least one media query/breakpoint (i.e. desktop, tablet, mobile, etc).
-  1. Fulfill the build requirements you have specified in your MVP.
-  1. Deployed site to a hosting service like [Github Pages](https://pages.github.com/).
-  1. Make commits to GitHub every day.
-  1. A `README.md` file that contains your project worksheet, a link to your live, deployed site, and any necessary installation instructions such as ```npm i```.
-
-#### 📋 List of APIs
-
-Below is a non-exhaustive list of some free APIs you can use. There are _many_ APIs out there, however, so if you find one not on this list, feel free to use it. No matter what API you decide on, make sure you can successfully make a GET request before you commit to using it.
-
-  1. Weather: https://openweathermap.org/api
-  1. News: https://newsapi.org/
-  1. Giphy: https://developers.giphy.com/
-  1. Pokemon: http://pokeapi.co/
-  1. Card Deck: https://deckofcardsapi.com/
-  1. City of Chicago: https://data.cityofchicago.org/
-  1. Beer: https://www.brewerydb.com/developers
-  1. Chuck Norris: http://www.icndb.com/
-  1. Rick and Morty: https://rickandmortyapi.com/documentation/#rest
-  
-[This site](https://github.com/toddmotto/public-apis) lists a collection APIs as well. Take a look through their libraries and try to find one that interests you. Please note, however, that many APIs will require an authentication key, and some APIs require payment. We **highly suggest** using a free API for your first project dealing with one.
-
-### STEP 5: &#x1F535; Ideas for Post-MVP - Not Mandatory
-- Look into [localstorage](https://developer.mozilla.org/en-US/docs/Web/API/Window/localStorage) so you can save data to the user's browser 
-- Add a second API.
-- Add creative use of event listeners and UI interaction.
-- Add media queries for responsive design.
-- Add animations.
-- Get input from a UX student on how to make your app have intuitive UI and design.
-
-### STEP 6: Technical Demonstration
-
-All projects will be presented to the class.  Your presentation should:
-
-* Be no longer than 5 minutes in length
-* Show off all features of the app
-* Explain the technical details
-* Explain the technical challenges
-* Explain which improvements you might make
-
-Your presentation should **NOT**:
-* Focus on what you didn't accomplish.
-
-You will be sharing your project and your code.  Be prepared to answer questions from the instructors and other students.
-
-Did you read all of the directions before starting? If so write `git commit -m "bee's bee buzz'n"` instead of `git commit -m "first commit"` for your first commit.
-
-### Step 7: Help and Support
-
-1. Each student will be given 5 (five) tokens, redeemable at any time during regular class time (subject to instructors' schedules), for 20 minutes. **Tokens cannot be transferred between students - there is no black market for tokens.**
-
-2. Give at least a 10 minutes heads up to an instructor with the link to your project repo and a link to your `issue` ticket. Instructors will not be holding open office hours during project week. This is to allow you to solve issues and errors you run in to on your own and with your classmates. 
-
-3. [Sign up here for help with your squad lead.](https://docs.google.com/forms/d/e/1FAIpQLSdNQXP9lOO4-RgXDN6Kg5RXkmydjhsuX9qtwoPwZga2wa8_Fw/viewform)
-
-### Step 8: Grading
-
-#### Hard Requirements
-
-The following requirements **_must_** be met in order for the project to be
-considered complete:
-
-- The project is deployed to GitHub Pages or a custom domain
-- The application renders in the browser and runs without errors
-- The repo has a README that adequately documents the project
-
-We do not give letter grades; it is either a pass/fail. The real benchmark is how much you grow and learn each unit. 
-
-You will receive feedback in a secret gist. The gist will be Slacked out independent of your P1 repo to keep feedback confidential. 
-
-An example of the gist can be found here: [Secret Gist](https://gist.git.generalassemb.ly/SteveVW/6b49d9b08d1edcd203609d843eb8b97f)
-
-If you would like more feedback than the gist, instructors will be available to meet one on one. Please feel free to reach out and schedule a time with your squad leader. 
-
-### Incomplete Projects
-
-Incomplete projects will be given an extension. An instructor will follow up with you to discuss the details of the resubmission.  **Note that you are allowed one extension on only one of the four projects.**
-
-<br>
-
-## PLAGIARISM
-
-Remember. We have a **zero-tolerance policy** towards plagiarism. More on our plagiarism policy can be found in our course wiki's [plagiarism page](https://gist.git.generalassemb.ly/SteveVW/7b780310c82d10df98a4e620abbfbfec).
+## Change Log
+ Use this section to document what changes were made and the reasoning behind those changes.  
