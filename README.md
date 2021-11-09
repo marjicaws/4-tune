@@ -108,7 +108,7 @@ Time frames are also key in the development cycle.  You have limited time to cod
 | Deployment.    |    H     |      1 hr      |     XXXX      |     XXXX    | 
 | Adding Form    |    H     |      3hrs      |     XXXX      |     XXXX    |
 | Working w/ API |    H     |      3hrs      |     XXXX      |     XXXX    |
-| Total          |    H     |      6hrs      |     XXXX      |     XXXX    |
+| Total          |    H     |      33hrs     |     XXXX      |     XXXX    |
 
 ## Code Snippet
 
