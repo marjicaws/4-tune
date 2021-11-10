@@ -1,40 +1,37 @@
 //let genreSearch = document.querySelector(".genrelist");
 
-const artistDiv = document.querySelector(".artist");
-console.log(artistDiv);
+// const artistsDiv = document.querySelector(".artists");
+// console.log(artistsDiv);
 
-function displayArtist(artist) {
- console.log(artist);
+// function displayArtist(artists) {
+//  console.log(artists);
 
- let div = document.createElement("div")
- let h3 = document.createElement("h3")
- h3.innerText = artist[0];
- div.appendChild(h3);
- artistDiv.appendChild(div);
+//  let div = document.createElement("div")
+//  let h2 = document.createElement("h2")
+//  h2.innerText = artists.track[0].artist.name;
+//  div.appendChild(h2);
+//  artistsDiv.appendChild(div);
 
- //append to artist div
- //append to
-}
+
+// let thumbnail = document.createElement("img")
+// thumbnail.setAttribute("src", artists.track[0].image)
+ 
+// }
+
 
 ///Request to get the data
-axios.get("https://ws.audioscrobbler.com/2.0/?method=chart.gettoptracks&artist=&api_key=aed2c1389af55ee448291a0b7eeaddfa&format=json")
-   .then((res) => {
-    const artist = res.data.tracks;
-        displayArtist(artist);
-  })
-  .catch((error)=> {
-      console.log(error);
-  })
-  .finally(() => {
-      console.log("DONE");
-  });
-
+async function fetchArtist() {
+let artists = await axios.get("https://ws.audioscrobbler.com/2.0/?method=chart.gettoptracks&artist=&api_key=aed2c1389af55ee448291a0b7eeaddfa&format=json")
+   console.log(artists);
 
 ///User selects genre from drop down 
 
 
 
 
+}
+
+fetchArtist()
 
 
 ///Then clicks "Go" button, every time go is pressed 
