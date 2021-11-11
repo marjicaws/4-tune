@@ -1,37 +1,37 @@
 //let genreSearch = document.querySelector(".genrelist");
 
-// const artistsDiv = document.querySelector(".artists");
-// console.log(artistsDiv);
+const artistsDiv = document.querySelector(".artists");
+ console.log(artistsDiv);
 
-// function displayArtist(artists) {
-//  console.log(artists);
+function displayArtist(artists) {
+ console.log(artists);
 
-//  let div = document.createElement("div")
-//  let h2 = document.createElement("h2")
-//  h2.innerText = artists.track[0].artist.name;
-//  div.appendChild(h2);
-//  artistsDiv.appendChild(div);
+ 
 
 
 // let thumbnail = document.createElement("img")
 // thumbnail.setAttribute("src", artists.track[0].image)
  
-// }
+ }
+
+displayArtist()
 
 
 ///Request to get the data
 async function fetchArtist() {
+    try{
 let artists = await axios.get("https://ws.audioscrobbler.com/2.0/?method=chart.gettoptracks&artist=&api_key=aed2c1389af55ee448291a0b7eeaddfa&format=json")
-   console.log(artists);
+   displayArtist(artists.data.tracks);
+    }catch(error) {
+        console.log(error);
+
+    }finally{
+        console.log("Done");
+    }
+};
 
 ///User selects genre from drop down 
-
-
-
-
-}
-
-fetchArtist()
+fetchArtist();
 
 
 ///Then clicks "Go" button, every time go is pressed 
