@@ -6,6 +6,7 @@ let artists = await axios.get("https://ws.audioscrobbler.com/2.0/?method=chart.g
    console.log(art);
    const arty = art.track[Math.floor(Math.random() * 50)]
    console.log(arty);
+   displayArtist(arty);
     }catch(error) {
         console.log(error);
 
@@ -15,23 +16,46 @@ let artists = await axios.get("https://ws.audioscrobbler.com/2.0/?method=chart.g
 };
 
 fetchArtist();
+
 ///User sees Artist Image, Name, and Link
-const artistImg = document.querySelector(".pic")
-const artistsDiv = document.querySelector(".artists");
- console.log(artistsDiv);
+
+const artistsDiv = document.querySelector(".artistinfo");
+console.log(artistsDiv);
 
 
 
- let div = document.createElement("artistname")
-   let h3 = document.createElement(h3)
- div.appendChild("h3")
-
- function displayArtist () {}
  
+ ///Someting to grab info and display data in seperate divs (.pic) (.artistinfo)
+
+ function displayArtist (arty) {
+     console.log(arty);
+
+     let div = document.createElement("div")
+     let h2 = document.createElement("h2")
+     h2.innerText = arty.artist.name;
+     div.appendChild(h2)
+     artistsDiv.appendChild(div);
+
+     let div2 = document.createElement("div")
+     let h3 = document.createElement("h3")
+     h3.innerText = arty.name;
+     div2.appendChild(h3);
+     artistsDiv.appendChild(div2);
+
+
+     let div3 = document.createElement("div")
+     let h4 = document.createElement("h4")
+     h4.innerText = arty.artist.url;
+     div.appendChild(h4);
+     artistsDiv.appendChild(div3);
+    
+     
+ }
  
+ displayArtist()
 
 
-///User Presses "Go" Button generate another random Top 50 artist.
+///User Presses "Go" Button generate another random Top 50 artist by refreshing page.
  
  ///what data do I access to bring up the info? "artists" works but past there no matter what part of the array I reference it doesn't work?
 ///api data is only useful when the data is inside of the original async functip
@@ -42,7 +66,6 @@ const artistsDiv = document.querySelector(".artists");
  
  
 ///Questions for help.
-//1. How to use Math.random to pull up random artists while keeping the playcount in mind.
  
 
 

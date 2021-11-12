@@ -2,7 +2,39 @@ body {
     background-image: url("./images/image-2.jpg");
     background-repeat: no-repeat;
     background-size: cover;
-    height: 100px;
+    margin-bottom: 400px;
+    
+    
+}
+.title {
+    background-color: white;
+    text-align: center;
+    margin: 50px;
+    padding: 10px;
+    border-radius: 25px 25px;
+    font-size: 40px;
+}
+.artistinfo {
+background-color: white;
+text-align: center;
+margin: 160px;
+border-radius: 25px 25px;
+padding: 5px;
+
+
 
 }
 
+.go{
+color: black;
+background-color: white;
+font-weight: bold;
+text-align: center;
+display: block;
+border: solid  ;
+padding: 15px 30px;
+font-size: larger;
+border-radius: 25px;
+margin: 50px 425px;
+
+}
