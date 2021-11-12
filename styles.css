@@ -9,10 +9,13 @@ body {
 .title {
     background-color: white;
     text-align: center;
-    margin: 50px;
+    margin: 50px 150px;
     padding: 10px;
+    width: 615px;
     border-radius: 25px 25px;
     font-size: 40px;
+    border: solid;
+    font-weight: bold;
 }
 .artistinfo {
 background-color: white;
@@ -20,6 +23,7 @@ text-align: center;
 margin: 160px;
 border-radius: 25px 25px;
 padding: 5px;
+border: solid;
 
 
 
