@@ -44,7 +44,7 @@ console.log(artistsDiv);
 
 
      let div3 = document.createElement("div")
-     let h4 = document.createElement("h4")
+     let h4 = document.createElement("h4", "a href")
      h4.innerText = arty.artist.url;
      div.appendChild(h4);
      artistsDiv.appendChild(div3);
@@ -56,6 +56,8 @@ console.log(artistsDiv);
 
 
 ///User Presses "Go" Button generate another random Top 50 artist by refreshing page.
+
+
  
  ///what data do I access to bring up the info? "artists" works but past there no matter what part of the array I reference it doesn't work?
 ///api data is only useful when the data is inside of the original async functip
@@ -66,7 +68,9 @@ console.log(artistsDiv);
  
  
 ///Questions for help.
- 
+ // 1.Turning url to clickable link
+ //2.find image then making sure the image 
+ //matches the info given from the first api
 
 
 

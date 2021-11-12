@@ -17,10 +17,20 @@ body {
     border: solid;
     font-weight: bold;
 }
+
+.expo{
+    background-color: white;
+    text-align: center;
+    padding: 20px;
+    margin: 50px 150px;
+    border: solid;
+    border-radius: 25px 25px;
+    font-size: larger;
+}
 .artistinfo {
 background-color: white;
 text-align: center;
-margin: 160px;
+margin: 50px 150px;
 border-radius: 25px 25px;
 padding: 5px;
 border: solid;
