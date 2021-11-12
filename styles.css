@@ -2,7 +2,7 @@ body {
     background-image: url("./images/image-2.jpg");
     background-repeat: no-repeat;
     background-size: cover;
-    margin-bottom: 400px;
+    margin-bottom: 200px;
     
     
 }
@@ -11,34 +11,47 @@ body {
     text-align: center;
     margin: 50px 150px;
     padding: 10px;
-    width: 615px;
+    
     border-radius: 25px 25px;
-    font-size: 40px;
+    font-size: 60px;
     border: solid;
     font-weight: bold;
+    position: static;
+    
+    justify-content: center;
+
+    font-family: 'Bebas Neue', sans-serif;
+
+    
 }
 
 .expo{
     background-color: white;
     text-align: center;
-    padding: 20px;
+    padding: 10px;
     margin: 50px 150px;
     border: solid;
     border-radius: 25px 25px;
     font-size: larger;
+    position: relative;
+    font-family: 'Mulish', sans-serif;
 }
 .artistinfo {
 background-color: white;
 text-align: center;
 margin: 50px 150px;
 border-radius: 25px 25px;
-padding: 5px;
+padding: 10px;
 border: solid;
-
+position: relative;
+font-family: 'Mulish', sans-serif;
 
 
 }
-
+a {
+    display: block;
+    font-size: larger;
+}
 .go{
 color: black;
 background-color: white;
@@ -47,8 +60,54 @@ text-align: center;
 display: block;
 border: solid  ;
 padding: 15px 30px;
-font-size: larger;
+font-size: 40px;
 border-radius: 25px;
-margin: 50px 425px;
+font-family: 'Mulish', sans-serif;
+
+
+position: static;
+margin: auto;
+min-width: 200px;
 
 }
+
+@media only screen and (max-width: 500px) {
+    body {
+      background-image: url("./images/image-2.jpg");
+      background-size: 600%;
+      background-position: bottom;
+      
+      position: relative;
+      
+      
+
+      
+    }
+    
+    .title {
+       min-width: max-content;
+       margin: -5px 20px;
+       
+        
+    }
+    .expo {
+        min-width: 150px;
+        min-width: 250px;
+        margin: 50px 45px 40px 30px;
+        
+    }
+    .artistinfo {
+       
+        min-width: 250px;
+        margin: -20px;
+        max-height: 500px;
+        
+    }
+    .go {
+        
+        margin: 35px 0 0 75px ;
+        
+       
+    }
+
+  }

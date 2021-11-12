@@ -6,6 +6,7 @@ let artists = await axios.get("https://ws.audioscrobbler.com/2.0/?method=chart.g
    console.log(art);
    const arty = art.track[Math.floor(Math.random() * 50)]
    console.log(arty);
+  
    displayArtist(arty);
     }catch(error) {
         console.log(error);
@@ -26,11 +27,14 @@ console.log(artistsDiv);
 
  
  ///Someting to grab info and display data in seperate divs (.pic) (.artistinfo)
-
- function displayArtist (arty) {
+ let div = document.createElement("div")
+function displayArtist (arty) {
      console.log(arty);
 
-     let div = document.createElement("div")
+      
+
+
+     
      let h2 = document.createElement("h2")
      h2.innerText = arty.artist.name;
      div.appendChild(h2)
@@ -44,15 +48,18 @@ console.log(artistsDiv);
 
 
      let div3 = document.createElement("div")
-     let h4 = document.createElement("h4", "a href")
-     h4.innerText = arty.artist.url;
-     div.appendChild(h4);
+     let a = document.createElement("a")
+     a.innerText = arty.artist.name;
+     a.href = arty.artist.url
+     div.appendChild(a);
      artistsDiv.appendChild(div3);
+     findImg(arty.artist.name , arty.name)
+    //
     
      
  }
  
- displayArtist()
+ 
 
 
 ///User Presses "Go" Button generate another random Top 50 artist by refreshing page.
@@ -78,10 +85,21 @@ console.log(artistsDiv);
 
 
 
-
-
-
-
-
+async function findImg(name , track) {
+    try {
+    let url = `https://ws.audioscrobbler.com/2.0/?method=artist.gettopalbums&artist=${name}&api_key=aed2c1389af55ee448291a0b7eeaddfa&format=json`
+   let url2 =  `http://ws.audioscrobbler.com/2.0/?method=track.getInfo&api_key=aed2c1389af55ee448291a0b7eeaddfa&artist=${name}&track=${track}&format=json`
+    let res = await axios.get(url2)
+    console.log(res.data)
+    let imgDiv = document.createElement("img")
+    imgDiv.src = res.data.track.album.image[3]["#text"]
+    div.appendChild(imgDiv)
+    } catch (error) {
+       let placeholder = "https://images.squarespace-cdn.com/content/v1/5d2e2c5ef24531000113c2a4/1564770283494-NFSE37KNC9HTBH88B2MP/image-asset.png?format=500w"
+       let imgDiv = document.createElement("img")
+       imgDiv.src = placeholder
+       div.appendChild(imgDiv)
+    }
+}
 
 
