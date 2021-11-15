@@ -97,19 +97,19 @@ Time frames are also key in the development cycle.  You have limited time to cod
 
 | Component      | Priority | Estimated Time | Time Invested | Actual Time |
 | ---            |  :---:   |     :---:      |    :---:      |    :---:    |
-| Git Request    |    H     |      3hrs      |     XXXX      |     XXXX    |
-| JS for Operaion|    H     |      4hrs      |     XXXX      |     XXXX    |
-| Retrieving Data|    H     |      3hrs      |     XXXX      |     XXXX    |
-| Rendering Data |    H     |      3hrs      |     XXXX      |     XXXX    |
-| CSS Resp. Dsgn |    H     |      4hrs      |     XXXX      |     XXXX    |
-| CSS Flex Box   |    H     |      4hrs      |     XXXX      |     XXXX    |
-| CSS Styling    |    L     |      3hrs      |     XXXX      |     XXXX    | 
+| Git Request    |    H     |      3hrs      |     3hrs      |     XXXX    |
+| JS for Operaion|    H     |      4hrs      |     6hrs      |     XXXX    |
+| Retrieving Data|    H     |      3hrs      |     4hrs      |     XXXX    |
+| Rendering Data |    H     |      3hrs      |     3hrs      |     XXXX    |
+| CSS Resp. Dsgn |    H     |      4hrs      |     2hrs      |     XXXX    |
+| CSS Flex Box   |    H     |      4hrs      |     2hrs      |     XXXX    |
+| CSS Styling    |    L     |      3hrs      |     3hrs      |     XXXX    | 
 | Post MVP       |    L     |      1 hr      |     XXXX      |     XXXX    |
-| HTML           |    H     |      1 hr      |     XXXX      |     XXXX    | 
-| Deployment.    |    H     |      1 hr      |     XXXX      |     XXXX    | 
+| HTML           |    H     |      1 hr      |     2hrs      |     XXXX    | 
+| Deployment.    |    H     |      1 hr      |     20mins    |     XXXX    | 
 | Adding Form    |    H     |      3hrs      |     XXXX      |     XXXX    |
-| Working w/ API |    H     |      3hrs      |     XXXX      |     XXXX    |
-| Total          |    H     |      33hrs     |     XXXX      |     XXXX    |
+| Working w/ API |    H     |      3hrs      |     3hrs      |     XXXX    |
+| Total          |    H     |      33hrs     |     28hrs     |     XXXX    |
 
 ## Code Snippet
 
