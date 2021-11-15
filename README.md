@@ -145,5 +145,7 @@ Change 1. The original  project idea was meant to be a randomizer that brought u
 
 Change 2. Last.fm's Api also does not allow access to use of their images. So Corey helped me to locate another api website with images and create a function that would ensure they would match up with the artists pulled from Last.fm's list.
 
+Change 3. Last.fm also does not include genre in the array. So it's completely random now.
+
 
 # [4-Tune](https://santamargarita1.github.io/4-tune/)
