@@ -21,7 +21,7 @@ fetchArtist();
 ///User sees Artist Image, Name, and Link
 
 const artistsDiv = document.querySelector(".artistinfo");
-console.log(artistsDiv);
+
 
 
 

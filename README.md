@@ -1,3 +1,4 @@
+
 # Project Overview
 
 ## Project Name
@@ -114,11 +115,35 @@ Time frames are also key in the development cycle.  You have limited time to cod
 
 Use this section to include a brief code snippet of functionality that you are proud of and a brief description.  
 
+I was very proud of my ability to call an axios function that worked and accurately called the artists at random using Math.random.
+
 ```
-function reverse(string) {
-	// here is the code to reverse a string of text
+async function fetchArtist() {
+	
+    try{
+let artists = await axios.get("https://ws.audioscrobbler.com/2.0/?method=chart.gettoptracks&artist=&api_key=aed2c1389af55ee448291a0b7eeaddfa&format=json")
+   let art = artists.data.tracks;
+   console.log(art);
+   const arty = art.track[Math.floor(Math.random() * 50)]
+   console.log(arty);
+  
+   displayArtist(arty);
+    }catch(error) {
+        console.log(error);
+
+    }finally{
+        console.log("Done");
+    }
+};
 }
 ```
 
 ## Change Log
  Use this section to document what changes were made and the reasoning behind those changes.  
+
+Change 1. The original  project idea was meant to be a randomizer that brought up artists that didn't have a lot of followers and plays. Last.fm's Api only shows artists that are Top 50 so I had to work with the information provided.
+
+Change 2. Last.fm's Api also does not allow access to use of their images. So Corey helped me to locate another api website with images and create a function that would ensure they would match up with the artists pulled from Last.fm's list.
+
+
+# [4-Tune](https://santamargarita1.github.io/4-tune/)
